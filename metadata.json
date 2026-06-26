@@ -1,0 +1,6 @@
+{
+  "name": "Analiză Loto Extinsă",
+  "description": "Aplicație avansată pentru analiza statistică și predicția prin machine learning a extragerilor loto (6/49, Joker, 5/40). Include backtesting, vizualizări interactive și export în Excel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
