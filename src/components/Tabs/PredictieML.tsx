@@ -12,9 +12,10 @@ interface PredictieMLProps {
   predictions: PredictionResult[];
   jokerPredictions?: PredictionResult[];
   onTopNumsChange?: (nums: number[]) => void;
+  numsReq?: number;
 }
 
-export default function PredictieML({ predictions, jokerPredictions, onTopNumsChange }: PredictieMLProps) {
+export default function PredictieML({ predictions, jokerPredictions, onTopNumsChange, numsReq = 6 }: PredictieMLProps) {
   const [topK, setTopK] = useState<number>(12);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [parityFilter, setParityFilter] = useState<string>("All");
@@ -98,7 +99,7 @@ export default function PredictieML({ predictions, jokerPredictions, onTopNumsCh
           {topRecommended.map((num, i) => (
             <div
               key={`${num}-${i}`}
-              className={`lotto-number ${i < 6 ? "active" : ""} transform hover:scale-115 cursor-default select-none shadow-md text-sm`}
+              className={`lotto-number ${i < numsReq ? "active" : ""} transform hover:scale-115 cursor-default select-none shadow-md text-sm`}
               title={`Recomandarea #${i + 1}`}
             >
               {num}

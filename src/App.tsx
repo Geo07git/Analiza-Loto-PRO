@@ -99,7 +99,7 @@ export default function App() {
 
   // Tab definitions
   const tabs = [
-    { id: "ml", label: "🤖 Predicție AI", icon: BrainCircuit, component: () => <PredictieML predictions={predictions} jokerPredictions={jokerPredictions} onTopNumsChange={setTopNums} /> },
+    { id: "ml", label: "🤖 Predicție AI", icon: BrainCircuit, component: () => <PredictieML predictions={predictions} jokerPredictions={jokerPredictions} onTopNumsChange={setTopNums} numsReq={config.nums} /> },
     { id: "combos", label: "🔢 Combinații", icon: Hash, component: () => <Combinatii draws={activeDraws} maxNum={config.maxNum} numsReq={config.nums} /> },
     { id: "stats", label: "📊 Statistici", icon: Grid, component: () => <Statistici draws={activeDraws} maxNum={config.maxNum} /> },
     { id: "backtest", label: "🔁 Backtest", icon: Activity, component: () => <Backtest draws={activeDraws} maxNum={config.maxNum} /> },
