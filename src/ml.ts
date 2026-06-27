@@ -140,7 +140,7 @@ export class RandomForestClassifierTS {
   trees: DecisionTreeClassifier[][] = []; // trees[targetIndex][treeIndex]
   numTargets = 0;
 
-  constructor(nEstimators = 150, maxDepth = 15) {
+  constructor(nEstimators = 40, maxDepth = 5) {
     this.nEstimators = nEstimators;
     this.maxDepth = maxDepth;
   }
@@ -231,7 +231,7 @@ export function trainAndPredict(
   const y = binaryDraws.slice(1);
 
   // Train Random Forest
-  const rf = new RandomForestClassifierTS(150, 15); // 50 estimators, maxDepth=5 is robust & fast
+  const rf = new RandomForestClassifierTS(40, 5); // 40 estimators, maxDepth=5 is robust & fast
   rf.fit(X, y);
 
   // Predict on last draw vector
