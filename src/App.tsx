@@ -41,7 +41,7 @@ export default function App() {
   useEffect(() => {
     let csvPath = "";
     if (selectedLoto === "Romania 6/49") {
-      csvPath = "/lot649.csv";
+      csvPath = "/Loto649.csv";
     } else if (selectedLoto === "Romania - Joker") {
       csvPath = "/LotoJoker.csv";
     } else if (selectedLoto === "Romania 5/40") {
